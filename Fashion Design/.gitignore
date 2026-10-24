@@ -1,0 +1,67 @@
+# Operating System Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+[Dd]esktop.ini
+
+# Editor & IDE Directories
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+*.sublime-project
+*.sublime-workspace
+
+# Environment & Local Secrets
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.cert
+
+# Historical Local Backups (Preserved on disk, excluded from deployment)
+_backup_phase1/
+*.bak
+*.orig
+
+# Node & Package Managers (if ever introduced)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Temporary & Build Output
+dist/
+build/
+.cache/
+*.tmp
+*.temp
+
+# Archives & logs
+*.zip
+*.7z
+*.rar
+*.log
+.claude/
+
+# Source images not used by index.html (kept on disk; provenance/licence not documented).
+# Delete a line here if you decide to publish that file.
+img/4975379.jpg
+img/626106556_1201361848829394_4886146993609063594_n.jpg
+img/B140-B140-1_18_21b600b2-7312-4341-a8cb-162573346c52.webp
+img/B143_6.jpg
+img/B150-1_13.jpg
+img/B163_1.webp
+img/B166-_1.jpg
+img/B166-_2.webp
+img/IMG_6607_copy_jpg.webp
+img/IMG_6625_copy.jpg_1.webp
+img/WEB--PHONE-_26.webp
+img/fast-fashion-concept-with-full-clothing-store.jpg

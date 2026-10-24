@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAISON NOIRE — The Form of Silence</title>
+    <meta name="description" content="MAISON NOIRE — A luxury fashion editorial and sculptural motion study: The Form of Silence.">
+    <meta name="theme-color" content="#F4F1E9">
+    <!-- Motion gate: runs before first paint so there is no flash of unstyled content.
+         If min.Js has not initialised within 3s, motion is switched off and all content stays visible. -->
+    <script>
+        (function () {
+            var d = document.documentElement;
+            try {
+                if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                    d.classList.add('js-motion');
+                    if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) { d.classList.add('js-parallax'); }
+                    window.setTimeout(function () {
+                        if (!d.classList.contains('motion-ready')) { d.classList.remove('js-motion', 'js-parallax'); }
+                    }, 3000);
+                }
+            } catch (e) { /* motion stays off; content remains visible */ }
+        })();
+    </script>
+    <link rel="preload" as="image" href="img/optimized/look-175-960.webp" imagesrcset="img/optimized/look-175-640.webp 640w, img/optimized/look-175-960.webp 960w, img/optimized/look-175-1280.webp 1280w" imagesizes="(max-width: 1024px) min(540px, 90vw), 40vw" fetchpriority="high">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Style.css">
+    <link rel="icon" href="img/optimized/favicon.svg" type="image/svg+xml">
+</head>
+
+<body>
+    <!-- 1. Header -->
+    <header id="site-header">
+        <div class="logo-container">
+            <a href="#hero" class="brand-logo" aria-label="MAISON NOIRE Home">
+                <span class="brand-name">MAISON NOIRE</span>
+                <span class="brand-sub">PARIS</span>
+            </a>
+        </div>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+        </button>
+        <nav id="siteNav" aria-label="Main Navigation">
+            <ul>
+                <li><a href="#hero">Overview</a></li>
+                <li><a href="#manifesto">Manifesto</a></li>
+                <li><a href="#collection">Archive</a></li>
+                <li><a href="#signature">Signature</a></li>
+                <li><a href="#motion">Motion</a></li>
+                <li><a href="#closing">Appointments</a></li>
+            </ul>
+        </nav>
+        <div class="nav-actions">
+            <a href="#closing" class="btn-nav-action">Request Lookbook</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- 2. Hero Section -->
+        <section class="hero" id="hero">
+            <div class="hero-content">
+                <div class="hero-content-text">
+                    <span class="hero-eyebrow">EDITORIAL N° 01 — AUTUMN / WINTER</span>
+                    <h1 class="hero-title">
+                        <span class="reveal-line"><span class="reveal-inner">MAISON</span></span>
+                        <span class="reveal-line"><span class="reveal-inner">NOIRE</span></span>
+                    </h1>
+                    <p class="hero-tagline"><span class="reveal-line"><span class="reveal-inner">The Form of Silence</span></span></p>
+                    <p class="hero-description">A quiet study in monolithic silhouettes, tactile drapery, and monochromatic stillness. Every fold exists as an architectural response to the body in motion.</p>
+                    <div class="hero-metadata">
+                        <div class="meta-item">
+                            <span class="meta-label">DISCIPLINE</span>
+                            <span class="meta-value">Sculptural Couture</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">PALETTE</span>
+                            <span class="meta-value">Ivory &amp; Obsidian</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">EDITION</span>
+                            <span class="meta-value">Archive Release 01</span>
+                        </div>
+                    </div>
+                    <div class="hero-cta-group">
+                        <a href="#collection" class="btn-primary">Explore Archive</a>
+                        <a href="#manifesto" class="btn-text-link">Read Philosophy &rarr;</a>
+                    </div>
+                </div>
+                <div class="hero-media">
+                    <figure class="hero-figure hero-figure-reveal">
+                        <div class="hero-visual-frame">
+                            <img src="img/optimized/look-175-960.webp" srcset="img/optimized/look-175-640.webp 640w, img/optimized/look-175-960.webp 960w, img/optimized/look-175-1280.webp 1280w" sizes="(max-width: 1024px) min(540px, 90vw), 40vw" alt="Sculptural draped couture bodice in black and white from The Form of Silence collection" class="hero-visual" data-parallax="0.035" width="900" height="1200" fetchpriority="high" decoding="async">
+                        </div>
+                        <figcaption class="hero-caption">
+                            <span class="caption-index">PLATE I</span>
+                            <span class="caption-text">Asymmetrical draped silk gazar and textured folds</span>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Manifesto Section -->
+        <section class="manifesto-section" id="manifesto">
+            <div class="manifesto-inner motion-reveal reveal-group">
+                <span class="section-eyebrow rv" style="--i:0">01 / MANIFESTO</span>
+                <!-- Three phrase groups. Each stays inline text in reading order; only the visual line mask animates. -->
+                <blockquote class="manifesto-quote">
+                    <span class="line-mask"><span class="line-inner" style="--i:1">&ldquo;We believe form exists prior to adornment. </span></span>
+                    <span class="line-mask"><span class="line-inner" style="--i:2">In silence, the cut speaks. </span></span>
+                    <span class="line-mask"><span class="line-inner" style="--i:3">In restraint, volume discovers gravity.&rdquo;</span></span>
+                </blockquote>
+                <p class="manifesto-elaboration rv" style="--i:5">
+                    <em>The Form of Silence</em> explores garment design as contemplative architecture. By reducing visual noise to pure texture, line, and light, the silhouette transforms space rather than occupying it.
+                </p>
+                <div class="manifesto-divider rule" style="--i:6"></div>
+            </div>
+        </section>
+
+        <!-- 4. Collection Archive (Asymmetric Grid) -->
+        <section class="products-section" id="collection">
+            <div class="section-header motion-reveal reveal-group">
+                <span class="section-eyebrow rv" style="--i:0">02 / THE ARCHIVE</span>
+                <h2><span class="line-mask"><span class="line-inner" style="--i:1">Curated Pieces</span></span></h2>
+                <p class="rv" style="--i:3">Eight structural investigations in pleated organza, raw crepe, vegetable-tanned bridle leather, and sculptural silk gazar.</p>
+            </div>
+            
+            <div class="editorial-grid">
+                <!-- Piece 01 (Major Feature Card) -->
+                <article class="editorial-card card-featured motion-reveal reveal-card">
+                    <div class="card-media">
+                        <img src="img/optimized/look-175-960.webp" srcset="img/optimized/look-175-640.webp 640w, img/optimized/look-175-960.webp 960w, img/optimized/look-175-1280.webp 1280w" sizes="(max-width: 1023px) 90vw, min(900px, 66vw)" alt="Silence Piece N° 01 — Haute Couture Asymmetrical Draped Silk Gazar Bodice" loading="lazy" decoding="async" width="800" height="1067">
+                        <span class="card-badge">N° 01</span>
+                    </div>
+                    <div class="card-body">
+                        <span class="card-category">HAUTE COUTURE BODICE</span>
+                        <h3>Silence Piece N° 01</h3>
+                        <p class="card-desc">Sculptural hand-folded silk gazar with asymmetrical diagonal pleats, engineered to mold organically over the collarbone and ribcage.</p>
+                        <div class="card-meta">
+                            <span>Material: Pure Silk Gazar</span>
+                            <span>Cut: Architectural Asymmetry</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Piece 02 -->
+                <article class="editorial-card card-standard motion-reveal reveal-card">
+                    <div class="card-media">
+                        <img src="img/optimized/look-180-960.webp" srcset="img/optimized/look-180-640.webp 640w, img/optimized/look-180-960.webp 960w, img/optimized/look-180-1280.webp 1280w" sizes="(max-width: 768px) 90vw, (max-width: 1023px) 46vw, 32vw" alt="Silence Piece N° 02 — High-Collar Chiaroscuro Portrait Gown in Crushed Organza" loading="lazy" decoding="async" width="600" height="800">
+                        <span class="card-badge">N° 02</span>
+                    </div>
+                    <div class="card-body">
+                        <span class="card-category">HIGH-COLLAR SILHOUETTE</span>
+                        <h3>Silence Piece N° 02</h3>
+                        <p class="card-desc">Chiaroscuro portrait gown with raw textured edge treatments and an elevated funnel neckline.</p>
+                        <div class="card-meta">
+                            <span>Material: Crushed Organza</span>
+                            <span>Cut: Funnel Silhouette</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Piece 03 -->
+                <article class="editorial-card card-standard motion-reveal reveal-card">
+                    <div class="card-media">
+                        <img src="img/optimized/look-174-960.webp" srcset="img/optimized/look-174-640.webp 640w, img/optimized/look-174-960.webp 960w, img/optimized/look-174-1280.webp 1280w" sizes="(max-width: 768px) 90vw, (max-width: 1023px) 46vw, 32vw" alt="Silence Piece N° 03 — Mineral Washed Silk Gown with Fluid Volumetric Lantern Sleeves" loading="lazy" decoding="async" width="600" height="800">
+                        <span class="card-badge">N° 03</span>
+                    </div>
+                    <div class="card-body">
+                        <span class="card-category">ETHREAL DRAPERY</span>
+                        <h3>Silence Piece N° 03</h3>
+                        <p class="card-desc">Translucent cloud-washed organza overlay constructed with floating lantern sleeves and fluid pleating.</p>
+                        <div class="card-meta">
+                            <span>Material: Mineral Washed Silk</span>
+                            <span>Cut: Volumetric Lantern Sleeve</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Piece 04 (Wide Panorama Card) -->
+                <article class="editorial-card card-wide motion-reveal reveal-card">
+                    <div class="card-media">
+                        <img src="img/optimized/look-177-960.webp" srcset="img/optimized/look-177-640.webp 640w, img/optimized/look-177-960.webp 960w, img/optimized/look-177-1280.webp 1280w" sizes="(max-width: 1024px) 90vw, 58vw" alt="Silence Piece N° 04 — Column Evening Cloak in Spun Silk and Wool Veil" loading="lazy" decoding="async" width="1200" height="700">
+                        <span class="card-badge">N° 04</span>
+                    </div>
+                    <div class="card-body">
+                        <span class="card-category">EVENING SILHOUETTE</span>
+                        <h3>Silence Piece N° 04</h3>
+                        <p class="card-desc">Chiaroscuro profile cloak designed to catch ambient light and natural shadows, featuring cascading linear elements that trace the spine.</p>
+                        <div class="card-meta">
+                            <span>Material: Spun Silk &amp; Wool Veil</span>
+                            <span>Cut: Column Silhouette</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Piece 05 -->
+                <article class="editorial-card card-standard card-offset motion-reveal reveal-card">
+                    <div class="card-media">
+                        <img src="img/optimized/look-178-960.webp" srcset="img/optimized/look-178-640.webp 640w, img/optimized/look-178-960.webp 960w, img/optimized/look-178-1280.webp 1280w" sizes="(max-width: 768px) 90vw, (max-width: 1023px) 46vw, 32vw" alt="Silence Piece N° 05 — Hand-Burnished Bridle Leather Shoulder Harness with Obsidian Fringe" loading="lazy" decoding="async" width="600" height="800">
+                        <span class="card-badge">N° 05</span>
+                    </div>
+                    <div class="card-body">
+                        <span class="card-category">STRUCTURED HARNESS</span>
+                        <h3>Silence Piece N° 05</h3>
+                        <p class="card-desc">Hand-shaped bridle leather shoulder harness supporting an obsidian cascade of hand-spun linear fringe.</p>
+                        <div class="card-meta">
+                            <span>Material: Bridle Leather &amp; Fringe</span>
+                            <span>Cut: Suspended Yoke</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Piece 06 -->
+                <article class="editorial-card card-standard motion-reveal reveal-card">
+                    <div class="card-media">
+                        <img src="img/optimized/look-182-960.webp" srcset="img/optimized/look-182-640.webp 640w, img/optimized/look-182-960.webp 960w, img/optimized/look-182-1280.webp 1280w" sizes="(max-width: 768px) 90vw, (max-width: 1023px) 46vw, 32vw" alt="Silence Piece N° 06 — Sculpted Column Gown in Textured Silk Crepe with Internal Boning" loading="lazy" decoding="async" width="600" height="800">
+                        <span class="card-badge">N° 06</span>
+                    </div>
+                    <div class="card-body">
+                        <span class="card-category">COLUMN GOWN</span>
+                        <h3>Silence Piece N° 06</h3>
+                        <p class="card-desc">Full-length sculptural gown engineered with internal boning and subtle ambient light-responsive fabric textures.</p>
+                        <div class="card-meta">
+                            <span>Material: Textured Silk Crepe</span>
+                            <span>Cut: Sculpted Column</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Piece 07 -->
+                <article class="editorial-card card-standard motion-reveal reveal-card">
+                    <div class="card-media">
+                        <img src="img/S6015_14.webp" alt="Silence Piece N° 07 — Sleeveless Radial High-Neck Blouse in Heavy Ivory Silk Crepe" loading="lazy" decoding="async" width="600" height="800">
+                        <span class="card-badge">N° 07</span>
+                    </div>
+                    <div class="card-body">
+                        <span class="card-category">STUDIO MINIMALISM</span>
+                        <h3>Silence Piece N° 07</h3>
+                        <p class="card-desc">High-neck sleeveless blouse in ivory washed crepe, detailed with gentle radial neckline pleats and brushed brass hardware.</p>
+                        <div class="card-meta">
+                            <span>Material: Heavy Silk Crepe</span>
+                            <span>Cut: Sleeveless Radial Neck</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Piece 08 -->
+                <article class="editorial-card card-standard card-offset motion-reveal reveal-card">
+                    <div class="card-media">
+                        <img src="img/B152_10.webp" alt="Silence Piece N° 08 — Draped Metallic Silk Brocade Tunic with Gathered Waistline" loading="lazy" decoding="async" width="600" height="800">
+                        <span class="card-badge">N° 08</span>
+                    </div>
+                    <div class="card-body">
+                        <span class="card-category">DRAPED METALLIC</span>
+                        <h3>Silence Piece N° 08</h3>
+                        <p class="card-desc">Asymmetrical metallic brocade tunic featuring an articulated gathered waistline that creates dynamic diagonal fluid folds.</p>
+                        <div class="card-meta">
+                            <span>Material: Metallic Silk Brocade</span>
+                            <span>Cut: Gathered Hip Drapery</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- 5. Signature Piece Spotlight -->
+        <section class="signature-section" id="signature">
+            <div class="signature-container">
+                <div class="signature-media motion-reveal reveal-signature">
+                    <figure class="signature-figure">
+                        <div class="signature-visual-frame">
+                            <img src="img/optimized/look-178-960.webp" srcset="img/optimized/look-178-640.webp 640w, img/optimized/look-178-960.webp 960w, img/optimized/look-178-1280.webp 1280w" sizes="(max-width: 1024px) min(540px, 90vw), 46vw" alt="The Obsidian Harness — Detailed view of bridle leather construction and obsidian fringe cascade" class="signature-visual" data-parallax="0.035" loading="lazy" decoding="async" width="900" height="1200">
+                        </div>
+                        <figcaption class="signature-caption">SIGNATURE PIECE — ARCHIVE NO. 05</figcaption>
+                    </figure>
+                </div>
+                <div class="signature-content motion-reveal reveal-group">
+                    <span class="section-eyebrow rv" style="--i:0">03 / SIGNATURE PIECE</span>
+                    <h2>
+                        <span class="line-mask"><span class="line-inner" style="--i:1">The Obsidian </span></span>
+                        <span class="line-mask"><span class="line-inner" style="--i:2">Harness</span></span>
+                    </h2>
+                    <p class="signature-lead rv" style="--i:4">A synthesis of architectural rigidity and fluid kinetics.</p>
+                    <p class="signature-desc rv" style="--i:5">
+                        Cut from vegetable-tanned bridle leather, the harness anchors an obsidian mantle of spun silk fringe that reacts to the slightest air current. By contrasting strict geometric harness lines with gravitational drape, the piece embodies the tension at the center of <em>The Form of Silence</em>.
+                    </p>
+                    <div class="signature-specifications">
+                        <div class="spec-row rv" style="--i:6">
+                            <span class="spec-label">Artisan Construction</span>
+                            <span class="spec-value">Hand-burnished leather with waxed linen saddle stitch</span>
+                        </div>
+                        <div class="spec-row rv" style="--i:7">
+                            <span class="spec-label">Weight &amp; Drape</span>
+                            <span class="spec-value">Suspended linear fringe with calibrated kinetic swing</span>
+                        </div>
+                        <div class="spec-row rv" style="--i:8">
+                            <span class="spec-label">Availability</span>
+                            <span class="spec-value">Made exclusively to order per individual measurement</span>
+                        </div>
+                    </div>
+                    <div class="signature-action rv" style="--i:9">
+                        <a href="#closing" class="btn-primary">Commission Inquiries</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Motion Study (Campaign Film) -->
+        <section class="motion-section" id="motion">
+            <div class="motion-header motion-reveal reveal-group">
+                <span class="section-eyebrow rv" style="--i:0">04 / KINETIC STUDY</span>
+                <h2><span class="line-mask"><span class="line-inner" style="--i:1">The Motion of Form</span></span></h2>
+                <p class="rv" style="--i:3">A continuous 24-second observational study examining drape under ambient light and natural gravity.</p>
+            </div>
+            <div class="motion-container motion-reveal reveal-video">
+                <div class="video-frame">
+                    <!-- No autoplay attribute and preload="none": nothing is downloaded until playback starts.
+                         min.Js starts silent playback only when the film is on screen (and motion is allowed);
+                         native controls remain as the no-JavaScript fallback. -->
+                    <video id="campaignVideo" src="img/2c267ca56ae34787ba5ebcd006e1e374.HD-1080p-7.2Mbps-71072233.mp4" poster="img/optimized/campaign-poster.webp" controls loop muted playsinline preload="none" width="606" height="1080" aria-describedby="videoTranscript"></video>
+                    <button class="video-play-toggle" id="videoPlayToggle" type="button" aria-label="Play campaign film" hidden>
+                        <span class="play-icon" aria-hidden="true">&#9654;</span>
+                        <span class="toggle-text">Play Study</span>
+                    </button>
+                    <div class="sr-only" id="videoTranscript">
+                        Visual description: A 24-second silent study of a model seated in a warm, carved-wood interior with brass trays on the wall. She wears black beneath loose satin outerwear, first in gold and then in blush pink, and the fabric catches the light as she moves. A short Arabic text overlay appears near the end.
+                    </div>
+                </div>
+                <div class="video-caption-bar">
+                    <div class="caption-col">
+                        <span class="caption-label">FILM DOCUMENTATION</span>
+                        <span class="caption-title">Plate IX — Ambient Fabric Kinetics</span>
+                    </div>
+                    <div class="caption-col">
+                        <span class="caption-label">CAPTURE SPEC</span>
+                        <span class="caption-title">Portrait 9:16 / 24 sec / Muted Playback</span>
+                    </div>
+                    <div class="caption-col">
+                        <span class="caption-label">STUDIO LOCATION</span>
+                        <span class="caption-title">Paris Atelier Chamber N° 02</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. Closing Editorial Statement -->
+        <section class="closing-section" id="closing">
+            <div class="closing-inner motion-reveal reveal-group">
+                <span class="section-eyebrow rv" style="--i:0">05 / APPOINTMENTS &amp; INQUIRIES</span>
+                <h2 class="closing-statement">
+                    <span class="line-mask"><span class="line-inner" style="--i:1">&ldquo;Form reduced </span></span>
+                    <span class="line-mask"><span class="line-inner" style="--i:2">until only essence remains.&rdquo;</span></span>
+                </h2>
+                <p class="closing-desc rv" style="--i:4">
+                    MAISON NOIRE maintains a private archive in Paris. Full collection portfolios, fabric swatches, and private salon appointments are arranged individually.
+                </p>
+                <div class="closing-actions rv" style="--i:5">
+                    <a href="mailto:inquiries@maisonnoire.com" class="btn-primary">Request Private Viewing</a>
+                    <a href="#hero" class="btn-text-link">Return to Overview &uarr;</a>
+                </div>
+                <span class="closing-rule rule" style="--i:7" aria-hidden="true"></span>
+            </div>
+        </section>
+    </main>
+
+    <!-- 8. Footer -->
+    <footer id="site-footer">
+        <div class="footer-grid motion-reveal reveal-group">
+            <div class="footer-col brand-col rv" style="--i:0">
+                <span class="footer-brand">MAISON NOIRE</span>
+                <p class="footer-tag">Haute Couture &amp; Sculptural Motion Research.<br>Paris, France.</p>
+            </div>
+            <div class="footer-col nav-col rv" style="--i:1">
+                <span class="footer-heading">NAVIGATION</span>
+                <ul>
+                    <li><a href="#hero">Overview</a></li>
+                    <li><a href="#manifesto">Manifesto</a></li>
+                    <li><a href="#collection">Collection Archive</a></li>
+                    <li><a href="#signature">Signature Piece</a></li>
+                    <li><a href="#motion">Motion Study</a></li>
+                </ul>
+            </div>
+            <div class="footer-col contact-col rv" style="--i:2">
+                <span class="footer-heading">SALON &amp; INQUIRIES</span>
+                <p>Private Salon: 18 Rue de la Paix, 75002 Paris</p>
+                <p>Inquiries: <a href="mailto:salon@maisonnoire.com">salon@maisonnoire.com</a></p>
+                <p>Press &amp; Editorial: <a href="mailto:press@maisonnoire.com">press@maisonnoire.com</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 MAISON NOIRE. All rights reserved. Fictional Luxury Fashion &amp; Editorial Motion Project.</p>
+        </div>
+    </footer>
+
+    <script src="min.Js"></script>
+</body>
+
+</html>
