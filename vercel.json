@@ -1,0 +1,13 @@
+{
+  "cleanUrls": true,
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/Fashion Design/index.html"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/Fashion Design/$1"
+    }
+  ]
+}
